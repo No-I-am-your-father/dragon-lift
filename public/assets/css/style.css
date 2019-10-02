@@ -1,0 +1,357 @@
+body {
+    background: #333;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.body-wrapper {
+    width: 800px;
+    height: 1500px;
+    margin: 0 auto;
+    background-color: #90D4ED;
+    background-image: linear-gradient(#90D4ED, #B3D8E5);
+    overflow: hidden;
+    position: relative;
+}
+
+.body-wrapper.night .desaturate {
+    filter: saturate(50%);
+}
+
+.body-wrapper.night {
+    background-color: #233363;
+    background-image: linear-gradient(#233363, #374571);
+}
+
+.bird {
+    animation: fly linear 0.5s infinite alternate;
+}
+
+.bird-wrapper {
+    display: block;
+    position: absolute;
+    width: 200px;
+}
+
+.body-wrapper.night .bird-wrapper {
+    display: none;
+}
+
+.bird-wrapper-1 {
+    animation-name: moveToRight;
+    animation-duration: 35s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    top: 500px;
+    left: -200px;
+}
+
+.bird-wrapper-2 {
+    animation-name: moveToLeft;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    top: 750px;
+    right: -200px;
+    width: 150px;
+    height: auto;
+}
+
+.bird-wrapper-3 {
+    animation-name: moveToLeft;
+    animation-duration: 45s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    top: 900px;
+    right: -200px;
+}
+
+.bird-color-blue .bird-a1 {
+    fill: #134aa3;
+}
+
+.bird-color-blue .bird-a2 {
+    fill: #175ac6;
+}
+
+.bird-color-blue .bird-a6 {
+    fill: #1552b4;
+}
+
+.bird-color-red .bird-b1 {
+    fill: #CB251F;
+}
+
+.bird-color-red .bird-b2 {
+    fill: #F72C25;
+}
+
+.bird-color-red .bird-b6 {
+    fill: #E12822;
+}
+
+.bird-color-yellow .bird-c1 {
+    fill: #C2AB25;
+}
+
+.bird-color-yellow .bird-c2 {
+    fill: #EDD02D;
+}
+
+.bird-color-yellow .bird-c6 {
+    fill: #D8BE29;
+}
+
+.cloud {
+    animation: fly linear 7s infinite alternate;
+}
+
+.cloud-wrapper {
+    display: block;
+    position: absolute;
+    width: 150px;
+}
+
+.cloud-wrapper-1 {
+    animation-name: moveToRight;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    top: 400px;
+    left: 0;
+    width: 200px;
+    height: auto;
+}
+
+.cloud-wrapper-2 {
+    animation-name: moveToLeft;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    top: 700px;
+    right: 0;
+    width: 220px;
+    height: auto;
+}
+
+.cloud-wrapper-3 {
+    animation-name: moveToLeft;
+    animation-duration: 100;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    top: 100px;
+    right: 50px;
+}
+
+.cloud-wrapper-4 {
+    animation-name: moveToLeft;
+    animation-duration: 100;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    top: 200px;
+    left: 50px;
+}
+
+.cloud-wrapper-5 {
+    animation-name: moveToLeft;
+    animation-duration: 100;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    top: 620px;
+    right: 250px;
+    width: 200px;
+    height: auto;
+}
+
+.cloud-wrapper-6 {
+    animation-name: moveToRight;
+    animation-duration: 150s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    top: 180px;
+    left: 0;
+}
+
+.ground {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.layer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.layer-sun {
+    left: 500px;
+    bottom: 580px;
+}
+
+.sun,
+.moon {
+    height: 230px;
+    width: auto;
+    display: block;
+    animation: rotation 25s linear infinite;
+}
+
+.moon {
+    display: none;
+    height: 180px;
+}
+
+.body-wrapper.night .sun {
+    display: none;
+}
+
+.body-wrapper.night .moon {
+    display: block;
+}
+
+.hill2 {
+    height: auto;
+    bottom: 100px;
+}
+
+.hill1 {
+    height: auto;
+    bottom: -50px;
+}
+
+.castle {
+    height: 550px;
+    width: auto;
+    left: 390px;
+    bottom: 20px;
+}
+
+.frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    pointer-events: none;
+}
+
+.dragon-wrapper {
+    bottom: -4px;
+    height: 100vh;
+    pointer-events: none;
+    position: fixed;
+    width: 800px;
+    z-index: 2;
+}
+
+.dragon-wrapper .dragon {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.dragon-layer {
+    background: none;
+    bottom: 0;
+    display: block;
+    left: 0;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    position: absolute;
+}
+
+/* ELEVATOR */
+/* Controls on the elevator page (/index) */
+.controls {
+    display: grid;
+    grid-template-columns: 1;
+    grid-row-gap: 10px;
+    left: 20px;
+    position: fixed;
+    top: 20px;
+}
+
+/* Controls on the "remote" control page (/control) */
+.remote-control-controls {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1;
+    grid-row-gap: 20px;
+    justify-items: center;
+    padding-top: 20px;
+}
+
+.remote-control-controls .control {
+    height: 245px;
+    width: 245px;
+    font-size: 90px;
+}
+
+/* https://www.w3schools.com/csSref/css3_pr_animation-keyframes.asp */
+@keyframes fly {
+    0% {
+        transform: translateY(15%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveToLeft {
+    0% {
+        right: -300px;
+        transform: scaleX(-1);
+    }
+
+    50% {
+        right: calc(100% + 200px);
+        transform: scaleX(-1);
+    }
+
+    51% {
+        right: calc(100% + 200px);
+        transform: scaleX(1);
+    }
+
+    100% {
+        right: -500px;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes moveToRight {
+    0% {
+        left: -300px;
+        transform: scaleX(1);
+    }
+
+    50% {
+        left: calc(100% + 200px);
+        transform: scaleX(1);
+    }
+
+    51% {
+        left: calc(100% + 200px);
+        transform: scaleX(-1);
+    }
+
+    100% {
+        left: -500px;
+        transform: scaleX(-1);
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
